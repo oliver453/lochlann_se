@@ -1,0 +1,507 @@
+{
+  "nav": {
+    "about": "About Us",
+    "menu": "Menu",
+    "lunchmenu": "Lunch",
+    "groups": "Large Groups",
+    "hours": "Opening Hours",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "The Oven",
+    "subtitle": "Authentic Neapolitan pizza in Arvika"
+  },
+  "welcome": {
+    "subheading": "Authentic Neapolitan pizza in Arvika",
+    "title": "Welcome to The Oven",
+    "text": "In Arvika, we stand out. With carefully selected ingredients and pizzas baked in a genuine wood-fired oven, you can taste the difference right away. For us, great food and excellent service go hand in hand – that's why we put just as much heart into the kitchen as we do into the service. Our goal is to give you, as our guest, an experience beyond the ordinary. Welcome, and enjoy your meal!",
+    "button": "See menu",
+    "lunch": "Lunch menu"
+  },
+  "info": {
+    "section1": {
+      "title": "In the oven",
+      "text": "An authentic Neapolitan pizza should, according to rules created by the organization Associazione Verace Pizza Napoletano, be round with a diameter of 30-35 centimeters, have high edges and be soft and elastic.\n\nThe dough consisting of wheat flour, yeast, salt and water should rise in different stages and then be formed flat and round by hand, without any help from rolling pins or mechanical presses.\n\nThe pizza should be cooked in a wood-fired oven."
+    },
+    "section2": {
+      "subheading": "Book an experience",
+      "title": "Large groups",
+      "text": "Are you a party of more than 8 people who want to visit The Oven? For larger groups, we need to manually enter your booking. Please email your booking to the email address below and we'll get back to you, warmly welcome!",
+      "button": "hello@theoven.se"
+    }
+  },
+  "hours": {
+    "title": "Opening Hours",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "today": "Today",
+    "disclamer": "Opening hours may vary during holidays and special occasions"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Do I need to book a table in advance?",
+        "answer": "We highly recommend booking a table in advance, especially on weekends and evenings. You can book by phone or by sending us an email."
+      },
+      {
+        "question": "Do you accept cash?",
+        "answer": "We are a cash-free restaurant and only accept card payments."
+      },
+      {
+        "question": "Can you accommodate allergies and special dietary needs?",
+        "answer": "Absolutely! Please let us know about any allergies or dietary restrictions when booking, and we'll make sure you enjoy a safe and delicious meal."
+      },
+      {
+        "question": "Do you offer takeaway?",
+        "answer": "You can order takeaway directly from us for pick-up. If you’d prefer to have your food delivered straight to your door, it’s quick and easy via Foodora, where you’ll also find our full menu."
+      },
+      {
+        "question": "Do you serve alcohol?",
+        "answer": "Yes, we are fully licensed to serve alcohol."
+      }
+    ]
+  },
+  "footer": {
+    "contactTitle": "Contact us and find your way here",
+    "address": "Storgatan 123, 123 45 Stockholm",
+    "phone": "+46 8 123 456 78",
+    "email": "hello@theoven.se",
+    "followUs": "Follow us",
+    "credits": "Website by",
+    "privacy": "Privacy Policy"
+  },
+  "bookingBtn": {
+    "buttonText": "Book Table",
+    "buttonAriaLabel": "Book table"
+  },
+  "newMenuModal": {
+      "title": "Weekend Treat!",
+      "description": "Enjoy a pizza or kebab plate for only 99 kr – takeaway available Friday and Saturday.",
+      "button": "Call to order",
+      "menuButton": "Our menu",
+      "close": "Close"  
+  },
+"menu": {
+  "title": "Our menu",
+  "subtitle": "Discover our authentic Italian dishes",
+  "categories": [
+    {
+      "name": "Starters",
+      "description": "Traditional Italian starters to begin your meal",
+      "image": "/images/9.webp",
+      "items": [
+        {
+          "name": "Dirty Fries",
+          "description": "French fries with cheddar cheese sauce, jalapeños, red onion, crispy bacon and truffle mayonnaise.",
+          "price": "149"
+        },
+        {
+          "name": "Gambas Al Ajillo",
+          "description": "Scampi fried with garlic, chili and olive oil. Served with toasted, home-baked bread.",
+          "price": "159"
+        },
+        {
+          "name": "Chèvre Chaud",
+          "description": "Butter-fried, home-baked bread topped with gratinated chèvre, honey, candied walnuts, pickled beetroot and arugula.",
+          "price": "169"
+        }
+      ]
+    },
+    {
+      "name": "Main Courses",
+      "description": "Main dishes with meat and fish",
+      "image": "/images/10.webp",
+      "items": [
+        {
+          "name": "Tenderloin Plank Steak 200g",
+          "description": "Served with duchess potatoes, red wine sauce, béarnaise sauce and butter-fried vegetables.",
+          "price": "299"
+        },
+        {
+          "name": "Bouillabaisse",
+          "description": "Seafood and fish stew with saffron and tomato. Served with lemon aioli and toasted, home-baked bread.",
+          "price": "279"
+        },
+        {
+          "name": "Panko-Breaded Pork Schnitzel",
+          "description": "Served with red wine sauce, béarnaise, French fries, parsley butter and butter-fried vegetables.",
+          "price": "199"
+        }
+      ]
+    },
+    {
+      "name": "Lighter Dishes",
+      "description": "Lighter dishes and pasta dishes",
+      "image": "/images/6.webp",
+      "items": [
+        {
+          "name": "Caesar Salad",
+          "description": "Romaine lettuce, red onion, cherry tomatoes, Grana Padano, croutons, Caesar dressing, chicken fillet and bacon.",
+          "price": "199"
+        },
+        {
+          "name": "Beef Tenderloin Tartufo Pasta",
+          "description": "Rigatoni in a creamy sauce with basil and white truffle oil. Topped with beef tenderloin, arugula and Grana Padano.",
+          "price": "249"
+        },
+        {
+          "name": "Pesto Pasta with Chicken",
+          "description": "Rigatoni in a creamy basil pesto sauce (contains nuts). Topped with chicken fillet, arugula and Grana Padano.",
+          "price": "239"
+        },
+        {
+          "name": "Fish 'n' Chips",
+          "description": "Panko-fried cod with French fries, lemon aioli and a mixed salad with citrus-honey vinaigrette.",
+          "price": "249"
+        }
+      ]
+    },
+    {
+      "name": "Burgers",
+      "description": "Smash burgers served with French fries",
+      "image": "/images/2.webp",
+      "items": [
+        {
+          "name": "Double Decker",
+          "description": "2x 100g smashed chuck burgers with cheddar, bacon, smoky mayonnaise, brioche bun, lettuce, tomato, pickled red onion and BBQ sauce. Served with French fries or sweet potato fries.",
+          "price": "219"
+        },
+        {
+          "name": "BBQ & Chèvre",
+          "description": "100g smashed chuck burger with gratinated chèvre and honey. BBQ mayonnaise, brioche bun, lettuce, tomato and pickled red onion. Served with French fries or sweet potato fries.",
+          "price": "219"
+        },
+        {
+          "name": "Halloumi Burger",
+          "description": "Fried halloumi with truffle mayonnaise, brioche bun, lettuce, tomato and pickled red onion. Served with French fries or sweet potato fries.",
+          "price": "199"
+        }
+      ]
+    },
+    {
+      "name": "Neapolitan Pizzas",
+      "description": "Authentic Neapolitan pizza baked in wood-fired oven according to tradition",
+      "image": "/images/11.webp",
+      "items": [
+        {
+          "name": "Margherita",
+          "description": "San Marzano tomato sauce, fresh mozzarella, fresh basil, virgin olive oil, Grana Padano.",
+          "price": "159"
+        },
+        {
+          "name": "Vesuvio",
+          "description": "San Marzano tomato sauce, fresh mozzarella, fresh basil, cooked ham, virgin olive oil, Grana Padano.",
+          "price": "159"
+        },
+        {
+          "name": "Capricciosa",
+          "description": "San Marzano tomato sauce, fresh mozzarella, fresh basil, artichoke, cooked ham, black olives, mushrooms, virgin olive oil, Grana Padano.",
+          "price": "179"
+        },
+        {
+          "name": "Prosciutto & Ruccola",
+          "description": "San Marzano tomato sauce, fresh mozzarella, fresh basil, prosciutto crudo, arugula, virgin olive oil, Grana Padano. Topped with honey.",
+          "price": "179"
+        },
+        {
+          "name": "Calabrese",
+          "description": "San Marzano tomato sauce, fresh mozzarella, fresh basil, salami, Grana Padano.",
+          "price": "179"
+        },
+        {
+          "name": "Funghi & Tartufo",
+          "description": "Fresh mozzarella, chanterelles, mushrooms, parsley, Grana Padano, white truffle oil.",
+          "price": "179"
+        },
+        {
+          "name": "Pesto E Pinoli",
+          "description": "San Marzano tomato sauce, fresh mozzarella, chicken fillet, basil pesto (contains nuts), Grana Padano, fig marmalade, candied walnuts.",
+          "price": "179"
+        },
+        {
+          "name": "The Oven's Beef Tenderloin Pizza",
+          "description": "San Marzano tomato sauce, fresh mozzarella, beef tenderloin, grilled peppers, mushrooms and gorgonzola.",
+          "price": "219"
+        },
+        {
+          "name": "The Baker's Kebab",
+          "description": "San Marzano tomato sauce, fresh mozzarella, pork gyros kebab, mushrooms and cherry tomatoes.",
+          "price": "199"
+        },
+        {
+          "name": "Pizza Bianco",
+          "description": "Crème fraîche, goat cheese, pear, pickled beets, candied walnuts, honey, arugula, and Grana Padano. Topped with balsamic.",
+          "price": "209"
+        },
+        {
+          "name": "Bleak Roe Pizza",
+          "description": "Crème fraîche, hand-peeled shrimp, finely chopped red onion, dill, bleak roe and lemon.",
+          "price": "259"
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "description": "Traditional Italian desserts",
+      "image": "/images/8.webp",
+      "items": [
+        {
+          "name": "Semifreddo",
+          "description": "With roasted white chocolate, salted caramel sauce and apple compote with cinnamon and vanilla.",
+          "price": "79"
+        },
+        {
+          "name": "Crème Brûlée",
+          "description": "With raspberry sorbet.",
+          "price": "79"
+        },
+        {
+          "name": "2x Tryffel",
+          "description": "Dark chocolate truffles flavored with coffee and Cointreau. Served with whipped cream.",
+          "price": "59"
+        },
+        {
+          "name": "Party Ice Cream",
+          "description": "2 scoops vanilla ice cream, tutti frutti sprinkles, chocolate sauce, cookies and whipped cream.",
+          "price": "59"
+        }
+      ]
+    },
+    {
+      "name": "For Kids",
+      "description": "Special dishes for our youngest guests",
+      "image": "/images/7.webp",
+      "items": [
+        {
+          "name": "Fish 'n' Chips",
+          "description": "",
+          "price": "129"
+        },
+        {
+          "name": "Pizza Vesuvio",
+          "description": "Tomato sauce, cheese and ham.",
+          "price": "129"
+        },
+        {
+          "name": "Hamburger",
+          "description": "100g smashed chuck burger with brioche bun, lettuce, French fries and ketchup.",
+          "price": "129"
+        }
+      ]
+    }
+    ]
+  },
+  "bookingSection": {
+    "title": "Book a table",
+    "largeParty": "For larger groups, we need to manually enter your booking. Please email your booking to the email address below and we'll get back to you, warmly welcome!",
+    "email": "hello@theoven.se"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for has disappeared like a pizza from the oven!",
+    "homeButton": "Go to Homepage",
+    "menuButton": "View Menu"
+  },
+  "booking": {
+    "buttonText": "Book Table",
+    "buttonAriaLabel": "Book table",
+    "nextButton": "Next",
+    "backButton": "Back",
+    "step1": {
+      "title": "How many are you?",
+      "subtitle": "Select number of guests"
+    },
+    "step2": {
+      "title": "Which day?",
+      "subtitle": "Choose date for your booking"
+    },
+    "step3": {
+      "title": "What time?",
+      "noTimes": "No available times for this date",
+      "bookButton": "Book Table"
+    },
+    "step4": {
+      "title": "Your Details",
+      "subtitle": "Fill in your contact information for the booking",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "First Name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Last Name",
+      "titleLabel": "Title",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+46 70 123 45 67",
+      "customerNote": "Message to restaurant (optional)",
+      "customerNotePlaceholder": "Special requests, allergies, etc...",
+      "newsletter": "I want to receive newsletters from the restaurant",
+      "submitButton": "Complete Booking",
+      "submitting": "Booking...",
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address",
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Invalid phone number"
+      }
+    },
+    "confirmation": {
+      "success": {
+        "title": "Booking Confirmed!",
+        "message": "Your booking has been completed successfully.",
+        "reservationNumber": "Reservation number:",
+        "emailNotice": "You will receive a confirmation email shortly.",
+        "closeButton": "Close"
+      },
+      "error": {
+        "title": "Something went wrong",
+        "message": "We could not complete your booking.",
+        "closeButton": "Close",
+        "tryAgainButton": "Try Again"
+      }
+    }
+  },
+  "offer": {
+    "page": {
+      "title": "Special Offer",
+      "description": "Enter your mobile number and get a free drink on your next visit!"
+    },
+    "form": {
+      "phoneLabel": "Mobile number",
+      "phonePlaceholder": "070-123 45 67",
+      "consentLabel": "I agree that The Oven may contact me with offers and news",
+      "submitButton": "Get offer",
+      "submitting": "Registering...",
+      "invalidPhone": "Please enter a valid Swedish mobile number",
+      "consentRequired": "You must agree to be contacted",
+      "alreadyRegistered": "This number is already registered",
+      "error": "An error occurred during registration"
+    },
+    "confirmation": {
+      "title": "Thank you!",
+      "description": "Show this code to the staff during your next visit. Please take a screenshot so you have it saved.",
+      "codeLabel": "Your code:",
+      "warning": "NOTE: Save this code! It can only be displayed once."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "passwordLabel": "Password",
+      "loginButton": "Login",
+      "wrongPassword": "Incorrect password",
+      "error": "An error occurred",
+      "registeredNumbers": "Registered Numbers",
+      "copyAll": "Copy All",
+      "copied": "Copied!",
+      "downloadCSV": "Download CSV",
+      "total": "Total:",
+      "numbers": "numbers",
+      "loading": "Loading...",
+      "mobileNumber": "Mobile Number",
+      "code": "Code",
+      "noNumbers": "No registered numbers yet"
+    }
+  },
+  "privacy": {
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: 23 October 2025",
+  "sections": {
+    "intro": {
+      "title": "1. Introduction",
+      "content": "Theoven.se is operated by The Oven AB. We value your privacy and are committed to protecting your personal data. This policy explains how we collect and process information on our website."
+    },
+    "dataCollection": {
+      "title": "2. Collection of personal data",
+      "content": "We collect personal data in the following ways:",
+      "list": [
+        "**Table bookings**: When you make a reservation, we collect your name, email address, and phone number to confirm your booking.",
+        "**Campaigns and offers**: When you sign up for our offers and promotions, we collect your mobile number to send you the offer and any future marketing messages.",
+        "**Photography**: Occasionally, photography may take place on our premises for marketing purposes. By being present in the venue, you consent to this. Please contact us if you wish to have a photo or video in which you appear removed."
+      ]
+    },
+    "dataUsage": {
+      "title": "3. How we use your data",
+      "content": "We use the collected information to:",
+      "list": [
+        "Manage and confirm table reservations",
+        "Send promotional offers and marketing material (with your consent)",
+        "Improve our website and services",
+        "Communicate with you regarding your booking or visit"
+      ]
+    },
+    "localStorage": {
+      "title": "4. Local storage",
+      "content": "Our website uses local storage in your browser to enhance your user experience. This storage does NOT contain personal data but is only used to:",
+      "list": [
+        "Remember if you have closed information modals",
+        "Save your website preferences",
+        "Improve site functionality"
+      ],
+      "note": "You can clear this information at any time through your browser settings."
+    },
+    "cookies": {
+      "title": "5. Cookies and tracking",
+      "content": "We do NOT use tracking cookies or analytics tools that collect behavioural data. We only use technically necessary local storage for basic website functionality."
+    },
+    "rights": {
+      "title": "6. Your rights",
+      "content": "Under GDPR, you have the following rights:",
+      "list": [
+        "**Right of access**: You may request a copy of the personal data we hold about you",
+        "**Right to rectification**: You may request that we correct any inaccurate data",
+        "**Right to erasure**: You may request that we delete your data",
+        "**Right to object**: You may object to marketing at any time",
+        "**Right to withdraw consent**: You may withdraw your consent for campaigns and newsletters at any time"
+      ],
+      "unsubscribe": "To unsubscribe from our newsletter or promotional messages, click the link below:",
+      "unsubscribeLink": "Unsubscribe here"
+    },
+    "dataSharing": {
+      "title": "7. Data sharing",
+      "content": "We NEVER sell your personal data. We only share information with:",
+      "list": [
+        "Booking systems to manage reservations",
+        "Email services to send booking confirmations",
+        "SMS services for campaigns and offers (only with your consent)"
+      ]
+    },
+    "dataSecurity": {
+      "title": "8. Security",
+      "content": "We take appropriate technical and organisational measures to protect your personal data from unauthorised access, loss, or misuse."
+    },
+    "contact": {
+      "title": "9. Contact us",
+      "content": "If you have any questions about this privacy policy or how we handle your personal data, please contact us:",
+      "company": "The Oven AB",
+      "email": "hello@theoven.se",
+      "phone": "+46 570 10 100",
+      "address": "Kyrkogatan 20, 671 31 Arvika"
+    },
+    "changes": {
+      "title": "10. Changes to this policy",
+      "content": "We may update this privacy policy when necessary. The latest revision date is always shown at the top of the page. We recommend checking this page regularly to stay informed."
+    }
+  },
+  "unsubscribe": {
+    "title": "Unsubscribe",
+    "description": "Enter your mobile number to unsubscribe from our SMS messages",
+    "phoneLabel": "Mobile number",
+    "phonePlaceholder": "070-123 45 67",
+    "submitButton": "Unsubscribe",
+    "submitting": "Unsubscribing...",
+    "successTitle": "Done!",
+    "successMessage": "Your number has been removed from our mailing list",
+    "errorNotFound": "No number registered with this phone number",
+    "errorGeneral": "An error occurred while unsubscribing",
+    "infoText": "When you unsubscribe, your number will be removed from our database and you will no longer receive SMS messages from us.",
+    "backLink": "Back to homepage"
+  }
+}
+}

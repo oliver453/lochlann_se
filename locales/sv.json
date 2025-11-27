@@ -1,0 +1,506 @@
+{
+  "nav": {
+    "about": "Om oss",
+    "menu": "Meny",
+    "lunchmenu": "Lunch",
+    "groups": "Stora sällskap",
+    "hours": "Öppettider",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Lochlann",
+    "subtitle": "Äkta Napolitansk pizza i Arvika"
+  },
+  "welcome": {
+    "subheading": "En smakfull upplevelse i Charlottenberg",
+    "title": "Välkommen till Lochlann",
+    "text": "Letar du efter en restaurang i Charlottenberg med varm atmosfär, generös service och vällagad mat med tydliga rötter i irländsk pubtradition? Då är Lochlann rätt plats för dig. Hos oss möts du av hemtrevlig stämning, rustika smaker och rätter tillagade på noggrant utvalda råvaror. Vår bar serverar klassiska cocktails, öl och alkoholfria alternativ som kompletterar smakerna på tallriken.",
+    "button": "Se meny",
+    "lunch": "Lunchmeny"
+  },
+  "info": {
+    "section1": {
+      "title": "På grillen",
+      "text": "Våra träkolsgrillade styckdetaljer byts ut med jämna mellanrum. Detta gör vi för att vi strävar efter att vara den bästa köttrestaurangen i Värmland.\n\nAlla köttbitar serveras dock alltid med med bearnaise, rödvinssky, grillade grönsaker samt örtkryddade pommes frites. Kolla in våra griffeltavlor så har du full kontroll."
+    },
+    "section2": {
+      "subheading": "Boka en upplevelse",
+      "title": "Stora sällskap",
+      "text": "Är ni ett sällskap på fler än 8 personer som vill besöka Lochlann? För större sällskap behöver vi manuellt lägga in er bokning. Vänligen maila in er bokning till mailadressen nedan så hör vi av oss, varmt välkomna!",
+      "button": "hello@theoven.se"
+    }
+  },
+  "hours": {
+    "title": "Öppettider",
+    "monday": "Måndag",
+    "tuesday": "Tisdag",
+    "wednesday": "Onsdag",
+    "thursday": "Torsdag",
+    "friday": "Fredag",
+    "saturday": "Lördag",
+    "sunday": "Söndag",
+    "closed": "Stängt",
+    "today": "Idag",
+    "disclamer": "Öppettiderna kan variera under helgdagar och speciella tillfällen"
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "questions": [
+      {
+        "question": "Behöver jag boka bord i förväg?",
+        "answer": "Vi rekommenderar starkt att boka bord i förväg, särskilt på helger och kvällar. Du kan boka via telefon eller genom att skicka ett mail till oss."
+      },
+      {
+        "question": "Tar ni kontanter?",
+        "answer": "Vi är en kontantfri restaurang och tar endast betalning med kort eller Swish."
+      },
+      {
+        "question": "Kan ni hantera allergier och specialkost?",
+        "answer": "Absolut! Meddela oss om eventuella allergier eller dietary restrictions när du bokar så ser vi till att du får en säker och njutbar måltid."
+      },
+        {
+          "question": "Har ni takeaway?",
+          "answer": "Du kan beställa takeaway direkt hos oss för avhämtning. Vill du hellre få maten levererad hem till dörren går det enkelt och smidigt via Foodora, där du hittar hela vår meny."
+        },
+      {
+        "question": "Har ni alkoholtillstånd?",
+        "answer": "Ja, vi har fullständiga rättigheter för servering av alkohol."
+      }
+    ]
+  },
+  "footer": {
+    "contactTitle": "Kontakta oss och hitta hit",
+    "address": "Storgatan 123, 123 45 Stockholm",
+    "phone": "+46 8 123 456 78",
+    "email": "hello@theoven.se",
+    "followUs": "Följ oss",
+    "credits": "Webbsida av",
+    "privacy": "Integritetspolicy"
+  },
+  "bookingBtn": {
+    "buttonText": "Boka bord",
+    "buttonAriaLabel": "Boka bord"
+  },
+  "newMenuModal": {
+    "title": "Nu kör vi lunch igen!",
+    "description": "Kommer ni ihåg vår omtyckta lunch? Det gör vi också – och nu är den tillbaka!",
+    "menuButton": "Se veckans meny",
+    "close": "Stäng"
+  },
+"menu": {
+  "title": "Vår meny",
+  "subtitle": "Upptäck våra autentiska italienska rätter",
+  "categories": [
+    {
+      "name": "Förrätter",
+      "description": "Traditionella italienska förrätter för att starta måltiden",
+      "image": "/images/9.webp",
+      "items": [
+        {
+          "name": "Dirty Fries",
+          "description": "Pommes frites, cheddarsås, jalapeño, rödlök, knaperstekt bacon och tryffelmajonnäs.",
+          "price": "149"
+        },
+        {
+          "name": "Gambas Al Ajillo",
+          "description": "Scampiräkor med vitlök, chili och olivolja. Serveras med rostat hembakat bröd.",
+          "price": "159"
+        },
+        {
+          "name": "Chèvre Chaud",
+          "description": "Smörstekt hembakat bröd med gratinerad chèvreost. Toppas med honung, kanderade valnötter, picklade betor och ruccola.",
+          "price": "169"
+        }
+      ]
+    },
+    {
+      "name": "Varmrätter",
+      "description": "Huvudrätter med kött och fisk",
+      "image": "/images/10.webp",
+      "items": [
+        {
+          "name": "Plankstek med Oxfilé 200g",
+          "description": "Serveras med duchessemos, rödvinssås, bearnaisesås och smörstekta grönsaker.",
+          "price": "299"
+        },
+        {
+          "name": "Bouillabaisse",
+          "description": "Fisk- och skaldjursgryta med smak av saffran och tomat. Serveras med citronaioli och rostat hembakat bröd.",
+          "price": "279"
+        },
+        {
+          "name": "Pankopanerad Schnitzel",
+          "description": "Fläskschnitzel med rödvinssås, bearnaisesås, pommes frites, persiljesmör samt smörstekta grönsaker.",
+          "price": "199"
+        }
+      ]
+    },
+    {
+      "name": "Enklare rätter",
+      "description": "Lättare rätter och pastarätter",
+      "image": "/images/6.webp",
+      "items": [
+        {
+          "name": "Caesarsallad",
+          "description": "Romansallad, rödlök, cocktailtomater, grana padano, krutonger, caesardressing, kyckling och bacon.",
+          "price": "199"
+        },
+        {
+          "name": "Pasta Tartufo med Oxfilé",
+          "description": "Rigatoni i krämig gräddsås med basilika och vittryffelolja. Toppas med stekt oxfilé, ruccola och grana padano.",
+          "price": "249"
+        },
+        {
+          "name": "Pestopasta med Kyckling",
+          "description": "Rigatoni i krämig gräddsås smaksatt med basilikapesto (nötter). Toppas med stekt kycklingfilé, ruccola och grana padano.",
+          "price": "239"
+        },
+        {
+          "name": "Fish 'n' Chips",
+          "description": "Pankofriterad torsk med pommes frites, citronaioli och salladsmix med citrus och honungsvinägrett.",
+          "price": "249"
+        }
+      ]
+    },
+    {
+      "name": "Hamburgare",
+      "description": "Smashburgare serverade med pommes frites",
+      "image": "/images/2.webp",
+      "items": [
+        {
+          "name": "Double Decker",
+          "description": "2x 100g smashed högrevsburgare med cheddarost, bacon, rökig majonnäs, briochebröd, krispsallad, tomat, picklad rödlök och BBQ-sås. Serveras med pommes frites eller sötpotatispommes.",
+          "price": "219"
+        },
+        {
+          "name": "BBQ & Chèvre",
+          "description": "100g smashed högrevsburgare med gratinerad chèvreost och honung. BBQ-majonnäs, briochebröd, krispsallad, tomat och picklad rödlök. Serveras med pommes frites eller sötpotatispommes.",
+          "price": "219"
+        },
+        {
+          "name": "Halloumiburgare",
+          "description": "Friterad halloumi med tryffelmajonnäs, briochebröd, krispsallad, tomat och picklad rödlök. Serveras med pommes frites eller sötpotatispommes.",
+          "price": "199"
+        }
+      ]
+    },
+    {
+      "name": "Napolitanska Pizzor",
+      "description": "Äkta napolitansk pizza bakas i vedugn enligt tradition",
+      "image": "/images/11.webp",
+      "items": [
+        {
+          "name": "Margherita",
+          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, jungfruolivolja, grana padano.",
+          "price": "159"
+        },
+        {
+          "name": "Vesuvio",
+          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, kokt skinka, jungfruolivolja, grana padano.",
+          "price": "159"
+        },
+        {
+          "name": "Capricciosa",
+          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, kronärtskocka, kokt skinka, svarta oliver, champinjoner, jungfruolivolja, grana padano.",
+          "price": "179"
+        },
+        {
+          "name": "Prosciutto & Ruccola",
+          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, prosciutto crudo, ruccola, jungfruolivolja, grana padano. Toppas med honung.",
+          "price": "179"
+        },
+        {
+          "name": "Calabrese",
+          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, salami, grana padano.",
+          "price": "179"
+        },
+        {
+          "name": "Funghi & Tartufo",
+          "description": "Färsk mozzarella, kantareller, svamp, persilja, grana padano, vittryffelolja.",
+          "price": "179"
+        },
+        {
+          "name": "Pesto E Pinoli",
+          "description": "San Marzano-tomatsås, färsk mozzarella, kycklingfilé, basilikapesto (nötter), grana padano, fikonmarmelad, kanderade valnötter.",
+          "price": "179"
+        },
+        {
+          "name": "The Oven's Oxfilépizza",
+          "description": "San Marzano-tomatsås, färsk mozzarella, oxfilé, grillad paprika, champinjoner och gorgonzola.",
+          "price": "219"
+        },
+        {
+          "name": "Bagarens Kebab",
+          "description": "San Marzano-tomatsås, färsk mozzarella, gyroskebab, champinjoner och cocktailtomater.",
+          "price": "199"
+        },
+        {
+          "name": "Pizza Bianco",
+          "description": "Crème fraîche, chèvreost, päron, picklade rödbetor, kanderade valnötter, honung, ruccola och grana padano. Toppad med balsamico.",
+          "price": "209"
+        },
+        {
+          "name": "Löjromspizza",
+          "description": "Crème fraîche, handskalade räkor, finhackad rödlök, dill, löjrom och citron.",
+          "price": "259"
+        }
+      ]
+    },
+    {
+      "name": "Desserter",
+      "description": "Traditionella italienska desserter",
+      "image": "/images/8.webp",
+      "items": [
+        {
+          "name": "Semifreddo",
+          "description": "Med rostad vit choklad, salt kolasås och äppelkompott med kanel och vanilj.",
+          "price": "79"
+        },
+        {
+          "name": "Crème Brûlée",
+          "description": "Med hallonsorbet.",
+          "price": "79"
+        },
+        {
+          "name": "2x Tryffel",
+          "description": "Mörk chokladtryffel med smak av kaffe och cointreau. Serveras med grädde.",
+          "price": "59"
+        },
+        {
+          "name": "Kalasgott!",
+          "description": "2 kulor vaniljglass med tutti frutti-strössel, chokladsås, rån och vispad grädde.",
+          "price": "59"
+        }
+      ]
+    },
+    {
+      "name": "Barnmenyer",
+      "description": "Särskilda rätter för våra yngsta gäster",
+      "image": "/images/7.webp",
+      "items": [
+        {
+          "name": "Fish 'n' Chips",
+          "description": "",
+          "price": "129"
+        },
+        {
+          "name": "Pizza Vesuvio",
+          "description": "Tomatsås, ost och skinka.",
+          "price": "129"
+        },
+        {
+          "name": "Hamburgare",
+          "description": "100g smashed högrevsburgare serveras med briochebröd, krispsallad, pommes frites och ketchup.",
+          "price": "129"
+        }
+      ]
+    }
+    ]
+  },
+  "bookingSection": {
+    "title": "Boka bord",
+    "largeParty": "För större sällskap behöver vi manuellt lägga in er bokning. Vänligen maila in er bokning till mailadressen nedan så hör vi av oss, varmt välkomna!",
+    "email": "hello@theoven.se"
+  },
+  "notFound": {
+    "title": "Sidan kunde inte hittas",
+    "description": "Sidan du letar efter har smitit iväg som en pizza från ugnen!",
+    "homeButton": "Gå till startsidan",
+    "menuButton": "Se meny"
+  },
+  "booking": {
+    "buttonText": "Boka bord",
+    "buttonAriaLabel": "Boka bord",
+    "nextButton": "Nästa",
+    "backButton": "Tillbaka",
+    "step1": {
+      "title": "Hur många är ni?",
+      "subtitle": "Välj antal personer"
+    },
+    "step2": {
+      "title": "Vilken dag?",
+      "subtitle": "Välj datum för din bokning"
+    },
+    "step3": {
+      "title": "Vilken tid?",
+      "noTimes": "Inga lediga tider för detta datum",
+      "bookButton": "Boka bord"
+    },
+    "step4": {
+      "title": "Dina uppgifter",
+      "subtitle": "Fyll i dina kontaktuppgifter för bokningen",
+      "firstName": "Förnamn",
+      "firstNamePlaceholder": "Förnamn",
+      "lastName": "Efternamn",
+      "lastNamePlaceholder": "Efternamn",
+      "titleLabel": "Titel",
+      "email": "E-post",
+      "emailPlaceholder": "din@email.se",
+      "phone": "Telefonnummer",
+      "phonePlaceholder": "+46 70 123 45 67",
+      "customerNote": "Meddelande till restaurangen (frivilligt)",
+      "customerNotePlaceholder": "Särskilda önskemål, allergier, etc...",
+      "newsletter": "Jag vill ta emot nyhetsbrev från restaurangen",
+      "submitButton": "Slutför bokning",
+      "submitting": "Bokar...",
+      "validation": {
+        "emailRequired": "E-post är obligatorisk",
+        "emailInvalid": "Oggiltig e-postadress",
+        "firstNameRequired": "Förnamn är obligatoriskt",
+        "lastNameRequired": "Efternamn är obligatoriskt",
+        "phoneRequired": "Telefonnummer är obligatoriskt",
+        "phoneInvalid": "Ogiltigt telefonnummer"
+      }
+    },
+    "confirmation": {
+      "success": {
+        "title": "Bokning bekräftad!",
+        "message": "Din bokning har genomförts framgångsrikt.",
+        "reservationNumber": "Bokningsnummer:",
+        "emailNotice": "Du kommer att få en bekräftelse via e-post inom kort.",
+        "closeButton": "Stäng"
+      },
+      "error": {
+        "title": "Något gick fel",
+        "message": "Vi kunde inte slutföra din bokning.",
+        "closeButton": "Stäng",
+        "tryAgainButton": "Försök igen"
+      }
+    }
+  },
+    "offer": {
+      "page": {
+        "title": "Erbjudande",
+        "description": "Ange ditt mobilnummer och få en valfri läsk vid ditt nästa besök!"
+      },
+      "form": {
+        "phoneLabel": "Mobilnummer",
+        "phonePlaceholder": "070-123 45 67",
+        "consentLabel": "Jag samtycker till att The Oven får skicka nyheter och erbjudanden.",
+        "submitButton": "Få erbjudande",
+        "submitting": "Registrerar...",
+        "invalidPhone": "Ange ett giltigt svenskt mobilnummer",
+        "consentRequired": "Du måste godkänna att vi kontaktar dig",
+        "alreadyRegistered": "Detta nummer är redan registrerat",
+        "error": "Ett fel uppstod vid registreringen"
+      },
+      "confirmation": {
+        "title": "Snyggt jobbat!",
+        "description": "Visa denna kod för personalen vid ditt nästa besök. Ta gärna en skärmdump så att du har den sparad.",
+        "codeLabel": "Din kod:",
+        "warning": "OBS: Spara denna kod! Den går bara att visa en gång."
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "passwordLabel": "Lösenord",
+        "loginButton": "Logga in",
+        "wrongPassword": "Felaktigt lösenord",
+        "error": "Ett fel uppstod",
+        "registeredNumbers": "Registrerade nummer",
+        "copyAll": "Kopiera alla",
+        "copied": "Kopierat!",
+        "downloadCSV": "Ladda ner CSV",
+        "total": "Totalt:",
+        "numbers": "nummer",
+        "loading": "Laddar...",
+        "mobileNumber": "Mobilnummer",
+        "code": "Kod",
+        "noNumbers": "Inga registrerade nummer än"
+      }
+    },
+    "privacy": {
+      "title": "Integritetspolicy",
+      "lastUpdated": "Senast uppdaterad: 23 oktober 2025",
+      "sections": {
+        "intro": {
+          "title": "1. Introduktion",
+          "content": "Lochlannsteakhouse.se drivs av Alnoor Group AB. Vi värnar om din integritet och strävar efter att skydda dina personuppgifter. Denna policy beskriver hur vi samlar in och behandlar information på vår webbplats."
+        },
+        "dataCollection": {
+          "title": "2. Insamling av personuppgifter",
+          "content": "Vi samlar in personuppgifter på följande sätt:",
+          "list": [
+            "**Bordsbokning**: När du bokar ett bord samlar vi in namn, e-postadress och telefonnummer för att bekräfta din bokning.",
+            "**Kampanjer och erbjudanden**: När du anmäler dig till våra erbjudanden och kampanjer samlar vi in ditt mobilnummer för att kunna skicka erbjudandet och eventuella framtida marknadsföringsmeddelanden.",
+            "**Fotografering**: Ibland förekommer fotografering i våra lokaler för marknadsföringsändamål. Genom att vistas i lokalen samtycker du till detta. Kontakta oss om du önskar att en bild eller video där du förekommer tas bort."
+          ]
+        },
+        "dataUsage": {
+          "title": "3. Hur vi använder dina uppgifter",
+          "content": "Vi använder insamlad information för att:",
+          "list": [
+            "Hantera och bekräfta bordsreservationer",
+            "Skicka kampanjerbjudanden och marknadsföringsmaterial (med ditt samtycke)",
+            "Förbättra vår webbplats och våra tjänster",
+            "Kommunicera med dig om din bokning eller ditt besök"
+          ]
+        },
+        "localStorage": {
+          "title": "4. Lokal lagring",
+          "content": "Vår webbplats använder lokal lagring i din webbläsare för att förbättra din användarupplevelse. Denna lagring innehåller INTE personuppgifter utan används endast för:",
+          "list": [
+            "Att komma ihåg om du har stängt informationsmodaler",
+            "Att spara dina preferenser för webbplatsen",
+            "Att förbättra webbplatsens funktionalitet"
+          ],
+          "note": "Du kan när som helst rensa denna information genom din webbläsares inställningar."
+        },
+        "cookies": {
+          "title": "5. Cookies och spårning",
+          "content": "Vi använder INTE spårningscookies eller analysverktyg som samlar in information om ditt beteende på webbplatsen. Vi använder endast tekniskt nödvändig lokal lagring för grundläggande webbplatsfunktionalitet."
+        },
+        "rights": {
+          "title": "6. Dina rättigheter",
+          "content": "Enligt GDPR har du följande rättigheter:",
+          "list": [
+            "**Rätt till tillgång**: Du kan begära en kopia av de personuppgifter vi har om dig",
+            "**Rätt till rättelse**: Du kan begära att vi korrigerar felaktiga uppgifter",
+            "**Rätt till radering**: Du kan begära att vi raderar dina uppgifter",
+            "**Rätt till invändning**: Du kan när som helst invända mot marknadsföring",
+            "**Rätt att återkalla samtycke**: Du kan när som helst återkalla ditt samtycke för kampanjer och nyhetsbrev"
+          ],
+          "unsubscribe": "För att avsluta din prenumeration på vårt nyhetsbrev eller våra kampanjer, klicka på länken nedan:",
+          "unsubscribeLink": "Avregistrera dig här"
+        },
+        "dataSharing": {
+          "title": "7. Delning av uppgifter",
+          "content": "Vi säljer ALDRIG dina personuppgifter. Vi delar endast information med:",
+          "list": [
+            "Bokningssystem för att hantera reservationer",
+            "E-posttjänster för att skicka bokningsbekräftelser",
+            "SMS-tjänster för kampanjer och erbjudanden (endast med ditt samtycke)"
+          ]
+        },
+        "dataSecurity": {
+          "title": "8. Säkerhet",
+          "content": "Vi vidtar lämpliga tekniska och organisatoriska åtgärder för att skydda dina personuppgifter mot obehörig åtkomst, förlust eller missbruk."
+        },
+        "contact": {
+          "title": "9. Kontakta oss",
+          "content": "Om du har frågor om denna integritetspolicy eller vår behandling av dina personuppgifter, kontakta oss:",
+          "company": "Alnoor Group AB",
+          "email": "info@lochlannsteakhouse.com",
+          "phone": "0571-20 999",
+          "address": "Stationsgatan 9, 673 32 Charlottenberg"
+        },
+        "changes": {
+          "title": "10. Ändringar i denna policy",
+          "content": "Vi kan komma att uppdatera denna integritetspolicy vid behov. Senaste uppdateringsdatum anges alltid högst upp på sidan. Vi rekommenderar att du regelbundet kontrollerar denna sida för att hålla dig informerad."
+        }
+      },
+      "unsubscribe": {
+        "title": "Avregistrera dig",
+        "description": "Ange ditt mobilnummer för att avregistrera dig från våra SMS-utskick",
+        "phoneLabel": "Mobilnummer",
+        "phonePlaceholder": "070-123 45 67",
+        "submitButton": "Avregistrera",
+        "submitting": "Avregistrerar...",
+        "successTitle": "Klart!",
+        "successMessage": "Ditt nummer har tagits bort från våra utskick",
+        "errorNotFound": "Inget nummer registrerat med detta telefonnummer",
+        "errorGeneral": "Ett fel uppstod vid avregistreringen",
+        "infoText": "När du avregistrerar dig tas ditt nummer bort från vår databas och du kommer inte längre att få SMS-utskick från oss.",
+        "backLink": "Tillbaka till startsidan"
+      }
+    }
+}

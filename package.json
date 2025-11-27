@@ -1,0 +1,55 @@
+{
+  "name": "the-oven-restaurant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:case": "find src -name '*.tsx' -o -name '*.ts' | xargs grep -l 'import.*[./]' | head -20",
+    "check:imports": "grep -r 'from [\"\\']\\.' src/ --include='*.tsx' --include='*.ts' || echo 'No relative imports found'",
+    "check:case": "find src -name '*.tsx' -o -name '*.ts' -exec basename {} \\; | sort | uniq -d",
+    "vercel-build": "npm run build"
+  },
+  "dependencies": {
+    "@dotlottie/react-player": "^1.6.19",
+    "@neondatabase/serverless": "^1.0.2",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "flag-icons": "^7.2.3",
+    "framer-motion": "^12.23.12",
+    "html5-qrcode": "^2.3.8",
+    "i18n": "^0.15.2",
+    "lucide-react": "^0.263.1",
+    "next": "^15.0.0",
+    "next-intl": "^4.3.7",
+    "qrcode": "^1.5.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.12.0",
+    "server-only": "^0.0.1",
+    "tailwind-animate": "^0.2.10",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.23",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
