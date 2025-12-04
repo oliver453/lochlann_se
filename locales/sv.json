@@ -27,7 +27,7 @@
       "subheading": "Boka en upplevelse",
       "title": "Stora sällskap",
       "text": "Är ni ett sällskap på fler än 8 personer som vill besöka Lochlann? För större sällskap behöver vi manuellt lägga in er bokning. Vänligen maila in er bokning till mailadressen nedan så hör vi av oss, varmt välkomna!",
-      "button": "hello@theoven.se"
+      "button": "info@lochlannsteakhouse.com"
     }
   },
   "hours": {
@@ -52,7 +52,7 @@
       },
       {
         "question": "Tar ni kontanter?",
-        "answer": "Vi är en kontantfri restaurang och tar endast betalning med kort eller Swish."
+        "answer": "Vi är en kontantfri restaurang och tar endast betalning med kort."
       },
       {
         "question": "Kan ni hantera allergier och specialkost?",
@@ -60,7 +60,7 @@
       },
         {
           "question": "Har ni takeaway?",
-          "answer": "Du kan beställa takeaway direkt hos oss för avhämtning. Vill du hellre få maten levererad hem till dörren går det enkelt och smidigt via Foodora, där du hittar hela vår meny."
+          "answer": "Du kan beställa takeaway direkt hos oss för avhämtning. Ring eller maila oss."
         },
       {
         "question": "Har ni alkoholtillstånd?",
@@ -87,216 +87,391 @@
     "menuButton": "Se veckans meny",
     "close": "Stäng"
   },
-"menu": {
-  "title": "Vår meny",
-  "subtitle": "Upptäck våra autentiska italienska rätter",
-  "categories": [
-    {
-      "name": "Förrätter",
-      "description": "Traditionella italienska förrätter för att starta måltiden",
-      "image": "/images/9.webp",
-      "items": [
+    "menu": {
+      "title": "The Menu",
+      "subtitle": "Upptäck Lochlanns smakupplevelser",
+      "categories": [
         {
-          "name": "Dirty Fries",
-          "description": "Pommes frites, cheddarsås, jalapeño, rödlök, knaperstekt bacon och tryffelmajonnäs.",
-          "price": "149"
+          "name": "Starters",
+          "description": "Smakfulla startare för att sätta tonen",
+          "image": "/images/starters.webp",
+          "items": [
+            {
+              "name": "Jalapeño Poppers",
+              "description": "6 st Krispiga jalapeñopoppers fyllda med krämig cheddar, ackompanjerade av vår fräscha green onion-dip.",
+              "price": "88"
+            },
+            {
+              "name": "Crispy Mozzarella Sticks",
+              "description": "6 st Spröda mozzarellasticks med rik, chunky salsa för perfekt balans mellan krämigt och krispigt.",
+              "price": "82"
+            },
+            {
+              "name": "Onion Rings",
+              "description": "10st Gyllene, nyfriterade lökringar som serveras med en len och smakrik cheddardip.",
+              "price": "88"
+            },
+            {
+              "name": "Lochlanns Hot Wings",
+              "description": "6 Saftiga kycklingvingar med ordentlig hetta, serverade med vår friska green onion-dip.",
+              "price": "115"
+            },
+            {
+              "name": "Lochlanns Mix Starter",
+              "description": "Ett urval av våra mest populära snacks – mozzarellasticks, jalapeñopoppers, lökringar och buffalo wings. Serveras med salsa och green-onion-dip för komplett smakupplevelse. 2 av varje.",
+              "price": "115"
+            }
+          ]
         },
         {
-          "name": "Gambas Al Ajillo",
-          "description": "Scampiräkor med vitlök, chili och olivolja. Serveras med rostat hembakat bröd.",
-          "price": "159"
+          "name": "Sallader",
+          "description": "Fräscha och mättande sallader",
+          "image": "/images/salads.webp",
+          "items": [
+            {
+              "name": "Kycklingsallad Lochlann Style",
+              "description": "Mör skivad kycklingfilé på en bädd av fräscha, krispiga grönsaker. Toppas med bacon, guacamole och vår signatur-whiskeydressing.",
+              "price": "189"
+            },
+            {
+              "name": "Räksallad Lochlann Style",
+              "description": "Generöst med handskalade räkor, serverade på fräscha grönsaker med ägg, krämig vitlöksdip och vår karakteristiska whiskeydressing.",
+              "price": "189"
+            },
+            {
+              "name": "Biffsallad Lochlann Style",
+              "description": "Fresh arugula, cherry tomatoes, and shaved Parmesan with balsamic dressing.",
+              "price": "199"
+            },
+            {
+              "name": "Laxsallad (Salmon)",
+              "description": "Fresh arugula, cherry tomatoes, and shaved Parmesan with balsamic dressing.",
+              "price": "209"
+            }
+          ]
         },
         {
-          "name": "Chèvre Chaud",
-          "description": "Smörstekt hembakat bröd med gratinerad chèvreost. Toppas med honung, kanderade valnötter, picklade betor och ruccola.",
-          "price": "169"
+          "name": "Pastarätter",
+          "description": "Smakrika pastarätter",
+          "image": "/images/pasta.webp",
+          "items": [
+            {
+              "name": "Pasta Beef",
+              "description": "Pasta i fyllig gorgonzolasås med strimlad biff, fräscha grönsaker och Jack Danielsspetsad pepparsås vid sidan av. Serveras med frasiga grönsaker.",
+              "price": "199"
+            },
+            {
+              "name": "Hot Chicken Pasta",
+              "description": "Wokad pasta med kycklingbröst, grönsaker, jalapeño, vitlök, sweetchili & oystersauce. Serveras med fräscha grönsaker.",
+              "price": "189"
+            },
+            {
+              "name": "Pasta EDA",
+              "description": "Pasta med strimlad oxfilé, färska champinjoner och pressad vitlök i en rund och mustig gräddsås.",
+              "price": "209"
+            }
+          ]
+        },
+        {
+          "name": "Lochlann Burgers",
+          "description": "Saftiga hamburgare gjorda på Black Angus",
+          "image": "/images/burgers.webp",
+          "items": [
+            {
+              "name": "Hot Jalapeño Burger",
+              "description": "BBQ-sås och saftig hemlagad Black Angus-burgare toppad med heta jalapeños.",
+              "price": "259",
+              "options": [
+                {
+                  "size": "200g",
+                  "price": "259"
+                },
+                {
+                  "size": "300g",
+                  "price": "266"
+                }
+              ]
+            },
+            {
+              "name": "B&C Burger",
+              "description": "Cheddar och bacon på en saftig hemlagad Black Angus-burgare.",
+              "price": "189",
+              "options": [
+                {
+                  "size": "200g",
+                  "price": "189"
+                },
+                {
+                  "size": "300g",
+                  "price": "259"
+                }
+              ]
+            },
+            {
+              "name": "Hickory Burger",
+              "description": "Klassisk Black Angus-burgare med fyllig hickorysås och två spröda onion rings.",
+              "price": "199",
+              "options": [
+                {
+                  "size": "200g",
+                  "price": "199"
+                },
+                {
+                  "size": "300g",
+                  "price": "275"
+                }
+              ]
+            },
+            {
+              "name": "Old Burger",
+              "description": "Saftig hemlagad Black Angus-burgare – rakt på sak, utan krusiduller.",
+              "price": "179",
+              "options": [
+                {
+                  "size": "200g",
+                  "price": "179"
+                },
+                {
+                  "size": "300g",
+                  "price": "266"
+                }
+              ]
+            },
+            {
+              "name": "Lochlann Chicken Burger",
+              "description": "Marinerad kycklingbröstfilé grillad till perfektion. Serveras med chilibernaise.",
+              "price": "195",
+              "options": [
+                {
+                  "size": "200g",
+                  "price": "195"
+                },
+                {
+                  "size": "300g",
+                  "price": "266"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Lochlann Fish",
+          "description": "Fisk- och skaldjursrätter",
+          "image": "/images/fish.webp",
+          "items": [
+            {
+              "name": "Fish & Chips",
+              "description": "Panerad rödspättafilé med remouladsås och vinäger, serveras med frasiga grönsaker och nyfriterade fries.",
+              "price": "189"
+            },
+            {
+              "name": "Lochlann Salmon",
+              "description": "Laxfilé med frasiga grönsaker, saltgurka, remouladsås och mangosås. Serveras med valfri potatis.",
+              "price": "229"
+            }
+          ]
+        },
+        {
+          "name": "Classic Lochlann",
+          "description": "Klassiska husspecialiteter",
+          "image": "/images/classics.webp",
+          "items": [
+            {
+              "name": "Hickory Smoked BBQ Ribs",
+              "description": "Våra möra revbenspjäll med räksmak. Serveras med Hickorysås, coleslaw, majskolv, vitlökssmör, frasiga grönsaker toppas med honungsstekta kaneldoftande äppelklyftor. Valfri potatis.",
+              "price": "289"
+            },
+            {
+              "name": "Beef Fajitas",
+              "description": "BBQ-grillad biff som steks med paprika och lök i en gjutjärnspanna. Serveras med guacamole, chunky salsa & sour cream, frasiga grönsaker, jalapeño, riven ost & varm vetetortilla.",
+              "price": "369"
+            },
+            {
+              "name": "Chicken Fajitas",
+              "description": "BBQ-grillad kycklingbröstfilé som steks med paprika och lök i en gjutjärnspanna. Serveras med guacamole, chunky salsa & sour cream, frasiga grönsaker, jalapeño, riven ost & varma vetetortilla.",
+              "price": "349"
+            },
+            {
+              "name": "Mixed Fajitas",
+              "description": "BBQ-grillad biff & grillad kycklingbröstfilé som steks med paprika och lök i en gjutjärnspanna. Serveras med guacamole, chunky salsa, frasiga grönsaker, jalapeño, riven ost & varma vetetortilla.",
+              "price": "409"
+            }
+          ]
+        },
+        {
+          "name": "Sandwich Dishes",
+          "description": "Smakrika smörgåsrätter",
+          "image": "/images/sandwich.webp",
+          "items": [
+            {
+              "name": "Bookmaker Toast",
+              "description": "140gr grillad oxfilé med rostat bröd, bacon, pepparrot & hemlagad bearnaise serveras med frasiga grönsaker & french fries.",
+              "price": "199"
+            },
+            {
+              "name": "Club Sandwich",
+              "description": "Grillad kycklingfilé med rostat bröd, bacon & hemlagad bearnaise. serveras med frasiga grönsaker & fresh fries.",
+              "price": "185"
+            }
+          ]
+        },
+        {
+          "name": "Lochlanns BBQ Steaks",
+          "description": "Ekologiskt närproducerat kött",
+          "image": "/images/steaks.webp",
+          "items": [
+            {
+              "name": "Ribeye (Entrecote)",
+              "description": "Allt kött som serveras hos oss är ekologiskt närproducerat.",
+              "price": "298",
+              "options": [
+                {
+                  "size": "Regular",
+                  "price": "298"
+                },
+                {
+                  "size": "Viking",
+                  "price": "359"
+                }
+              ]
+            },
+            {
+              "name": "Striploin (Biff)",
+              "description": "Allt kött som serveras hos oss är ekologiskt närproducerat.",
+              "price": "298",
+              "options": [
+                {
+                  "size": "Regular",
+                  "price": "298"
+                },
+                {
+                  "size": "Viking",
+                  "price": "359"
+                }
+              ]
+            },
+            {
+              "name": "Tenderloin (Oxfilé)",
+              "description": "Allt kött som serveras hos oss är ekologiskt närproducerat.",
+              "price": "319",
+              "options": [
+                {
+                  "size": "Regular",
+                  "price": "319"
+                },
+                {
+                  "size": "Viking",
+                  "price": "379"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "The Celts Choice",
+          "description": "Stora kombinationsrätter för den hungrige",
+          "image": "/images/celts.webp",
+          "items": [
+            {
+              "name": "Lochlann Warrior Dinner",
+              "description": "200 gr entrecote, 200 gr biff, 200 gr BBQ hickory ribs. Serveras med frasiga grönsaker, hickorysås pepparsås, coleslaw, majskolv & valfri potatis.",
+              "price": "699"
+            },
+            {
+              "name": "Lochlann Kjetil Dinner",
+              "description": "200 gr biff & 400 gr BBQ hickory ribs. Serveras med hickorysås, coleslaw, majskolv, chunky salsa, frasiga grönsaker toppas med honungsstekta kaneldoftande äppelklyftor & valfri potatis.",
+              "price": "419"
+            },
+            {
+              "name": "Lochlann Ladies Dinner",
+              "description": "200 gr biff & 150 gr marinerad kycklingfilé, frasiga grönsaker serveras med guacamole, chunky salsa & majskolv med vitlökssmör, valfri potatis.",
+              "price": "379"
+            },
+            {
+              "name": "Godess of Lochlann",
+              "description": "Biffspett, kycklingfiléspett & vegetariskt spett. Serveras med chunky salsa, vitlöksdip, majskolv, whiskeydressing, valfri potatis.",
+              "price": "389"
+            }
+          ]
+        },
+        {
+          "name": "Färjestad Meny",
+          "description": "Serveras endast under Färjestads matcher",
+          "image": "/images/farjestad.webp",
+          "items": [
+            {
+              "name": "Lochlanns Färjestads Burger",
+              "description": "Med lökringar, cheddarsås, och whiskeydressing, serveras med frasiga grönsaker och fresh fries.",
+              "price": "169"
+            },
+            {
+              "name": "Classic Swedish Chicken Nuggets",
+              "description": "Friterade guldklimpar av kyckling, serveras med frasiga grönsaker & whiskeydressing, vitlöksdip, coleslaw & gruvskuren fresh fries.",
+              "price": "145"
+            },
+            {
+              "name": "Svensk Klassisk Plank Stek (Planked Steak)",
+              "description": "Grillad biff eller oxfilé på klassisk planka med pommes duchesse, Jack Daniels spetsad peppar sås och en klassisk hemlagad bearnaisesås. Serveras med baconinlindad sparris, kokt majskolv och frasiga grönsaker.",
+              "price": "319"
+            }
+          ]
+        },
+        {
+          "name": "The Lochlann Kids Meny",
+          "description": "Barnvänliga alternativ",
+          "image": "/images/kids.webp",
+          "items": [
+            {
+              "name": "Asterix Hamburger Plate",
+              "description": "90gr grillad saftig hamburgare av nötkött med hemlagad bearnaisesås serveras med frasiga grönsaker samt fresh fries.",
+              "price": "109"
+            },
+            {
+              "name": "Obelix Grillspett",
+              "description": "100gr biff på spett som grillas. Serveras med hemlagad bearnaisesås, frasiga grönsaker och french fries.",
+              "price": "139"
+            },
+            {
+              "name": "Idefix Chicken Nuggets",
+              "description": "4 st friterade guldklimpar av kyckling, serveras med frasiga grönsaker och fresh fries med vitlöksdressing.",
+              "price": "109"
+            }
+          ]
+        },
+        {
+          "name": "Sweets at Lochlann",
+          "description": "Avsluta med något sött",
+          "image": "/images/desserts.webp",
+          "items": [
+            {
+              "name": "Strawberry Dream",
+              "description": "Jordgubbar och hallon som marineras i mintlikör. Toppas med vaniljglass & lättvispad grädde. Serveras i ett champagneglas.",
+              "price": "102"
+            },
+            {
+              "name": "Blåbärspaj",
+              "description": "Serveras med vaniljglass och grädde.",
+              "price": "109"
+            },
+            {
+              "name": "Äpplepaj",
+              "description": "Serveras med vaniljglass och grädde.",
+              "price": "109"
+            },
+            {
+              "name": "Vanilla Mudslide",
+              "description": "3cl Kahlua & 3 cl Baileys, skakas med mjölk, toppas med vaniljglass, grädde och chokladsås. Allt serveras i en frostad ölsejdel.",
+              "price": "135"
+            },
+            {
+              "name": "Vanilla Ice Cream",
+              "description": "Vaniljglass med chokladsås.",
+              "price": "89"
+            }
+          ]
         }
       ]
     },
-    {
-      "name": "Varmrätter",
-      "description": "Huvudrätter med kött och fisk",
-      "image": "/images/10.webp",
-      "items": [
-        {
-          "name": "Plankstek med Oxfilé 200g",
-          "description": "Serveras med duchessemos, rödvinssås, bearnaisesås och smörstekta grönsaker.",
-          "price": "299"
-        },
-        {
-          "name": "Bouillabaisse",
-          "description": "Fisk- och skaldjursgryta med smak av saffran och tomat. Serveras med citronaioli och rostat hembakat bröd.",
-          "price": "279"
-        },
-        {
-          "name": "Pankopanerad Schnitzel",
-          "description": "Fläskschnitzel med rödvinssås, bearnaisesås, pommes frites, persiljesmör samt smörstekta grönsaker.",
-          "price": "199"
-        }
-      ]
-    },
-    {
-      "name": "Enklare rätter",
-      "description": "Lättare rätter och pastarätter",
-      "image": "/images/6.webp",
-      "items": [
-        {
-          "name": "Caesarsallad",
-          "description": "Romansallad, rödlök, cocktailtomater, grana padano, krutonger, caesardressing, kyckling och bacon.",
-          "price": "199"
-        },
-        {
-          "name": "Pasta Tartufo med Oxfilé",
-          "description": "Rigatoni i krämig gräddsås med basilika och vittryffelolja. Toppas med stekt oxfilé, ruccola och grana padano.",
-          "price": "249"
-        },
-        {
-          "name": "Pestopasta med Kyckling",
-          "description": "Rigatoni i krämig gräddsås smaksatt med basilikapesto (nötter). Toppas med stekt kycklingfilé, ruccola och grana padano.",
-          "price": "239"
-        },
-        {
-          "name": "Fish 'n' Chips",
-          "description": "Pankofriterad torsk med pommes frites, citronaioli och salladsmix med citrus och honungsvinägrett.",
-          "price": "249"
-        }
-      ]
-    },
-    {
-      "name": "Hamburgare",
-      "description": "Smashburgare serverade med pommes frites",
-      "image": "/images/2.webp",
-      "items": [
-        {
-          "name": "Double Decker",
-          "description": "2x 100g smashed högrevsburgare med cheddarost, bacon, rökig majonnäs, briochebröd, krispsallad, tomat, picklad rödlök och BBQ-sås. Serveras med pommes frites eller sötpotatispommes.",
-          "price": "219"
-        },
-        {
-          "name": "BBQ & Chèvre",
-          "description": "100g smashed högrevsburgare med gratinerad chèvreost och honung. BBQ-majonnäs, briochebröd, krispsallad, tomat och picklad rödlök. Serveras med pommes frites eller sötpotatispommes.",
-          "price": "219"
-        },
-        {
-          "name": "Halloumiburgare",
-          "description": "Friterad halloumi med tryffelmajonnäs, briochebröd, krispsallad, tomat och picklad rödlök. Serveras med pommes frites eller sötpotatispommes.",
-          "price": "199"
-        }
-      ]
-    },
-    {
-      "name": "Napolitanska Pizzor",
-      "description": "Äkta napolitansk pizza bakas i vedugn enligt tradition",
-      "image": "/images/11.webp",
-      "items": [
-        {
-          "name": "Margherita",
-          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, jungfruolivolja, grana padano.",
-          "price": "159"
-        },
-        {
-          "name": "Vesuvio",
-          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, kokt skinka, jungfruolivolja, grana padano.",
-          "price": "159"
-        },
-        {
-          "name": "Capricciosa",
-          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, kronärtskocka, kokt skinka, svarta oliver, champinjoner, jungfruolivolja, grana padano.",
-          "price": "179"
-        },
-        {
-          "name": "Prosciutto & Ruccola",
-          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, prosciutto crudo, ruccola, jungfruolivolja, grana padano. Toppas med honung.",
-          "price": "179"
-        },
-        {
-          "name": "Calabrese",
-          "description": "San Marzano-tomatsås, färsk mozzarella, färsk basilika, salami, grana padano.",
-          "price": "179"
-        },
-        {
-          "name": "Funghi & Tartufo",
-          "description": "Färsk mozzarella, kantareller, svamp, persilja, grana padano, vittryffelolja.",
-          "price": "179"
-        },
-        {
-          "name": "Pesto E Pinoli",
-          "description": "San Marzano-tomatsås, färsk mozzarella, kycklingfilé, basilikapesto (nötter), grana padano, fikonmarmelad, kanderade valnötter.",
-          "price": "179"
-        },
-        {
-          "name": "The Oven's Oxfilépizza",
-          "description": "San Marzano-tomatsås, färsk mozzarella, oxfilé, grillad paprika, champinjoner och gorgonzola.",
-          "price": "219"
-        },
-        {
-          "name": "Bagarens Kebab",
-          "description": "San Marzano-tomatsås, färsk mozzarella, gyroskebab, champinjoner och cocktailtomater.",
-          "price": "199"
-        },
-        {
-          "name": "Pizza Bianco",
-          "description": "Crème fraîche, chèvreost, päron, picklade rödbetor, kanderade valnötter, honung, ruccola och grana padano. Toppad med balsamico.",
-          "price": "209"
-        },
-        {
-          "name": "Löjromspizza",
-          "description": "Crème fraîche, handskalade räkor, finhackad rödlök, dill, löjrom och citron.",
-          "price": "259"
-        }
-      ]
-    },
-    {
-      "name": "Desserter",
-      "description": "Traditionella italienska desserter",
-      "image": "/images/8.webp",
-      "items": [
-        {
-          "name": "Semifreddo",
-          "description": "Med rostad vit choklad, salt kolasås och äppelkompott med kanel och vanilj.",
-          "price": "79"
-        },
-        {
-          "name": "Crème Brûlée",
-          "description": "Med hallonsorbet.",
-          "price": "79"
-        },
-        {
-          "name": "2x Tryffel",
-          "description": "Mörk chokladtryffel med smak av kaffe och cointreau. Serveras med grädde.",
-          "price": "59"
-        },
-        {
-          "name": "Kalasgott!",
-          "description": "2 kulor vaniljglass med tutti frutti-strössel, chokladsås, rån och vispad grädde.",
-          "price": "59"
-        }
-      ]
-    },
-    {
-      "name": "Barnmenyer",
-      "description": "Särskilda rätter för våra yngsta gäster",
-      "image": "/images/7.webp",
-      "items": [
-        {
-          "name": "Fish 'n' Chips",
-          "description": "",
-          "price": "129"
-        },
-        {
-          "name": "Pizza Vesuvio",
-          "description": "Tomatsås, ost och skinka.",
-          "price": "129"
-        },
-        {
-          "name": "Hamburgare",
-          "description": "100g smashed högrevsburgare serveras med briochebröd, krispsallad, pommes frites och ketchup.",
-          "price": "129"
-        }
-      ]
-    }
-    ]
-  },
   "bookingSection": {
     "title": "Boka bord",
     "largeParty": "För större sällskap behöver vi manuellt lägga in er bokning. Vänligen maila in er bokning till mailadressen nedan så hör vi av oss, varmt välkomna!",

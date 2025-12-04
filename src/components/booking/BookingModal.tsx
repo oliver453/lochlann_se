@@ -1,3 +1,4 @@
+// src/components/booking/BookingModal.tsx
 "use client";
 
 import React, { useState, useCallback } from "react";
@@ -5,21 +6,20 @@ import { FaTimes } from "react-icons/fa";
 import { BookingStep1 } from "./BookingStep1";
 import { BookingStep2 } from "./BookingStep2";
 import { BookingStep3 } from "./BookingStep3";
+import { BookingStep4 } from "./BookingStep4";
 import type { BookingFormData } from "../../../types/booking";
 import type { Locale } from "../../../i18n.config";
-
-type Dictionary = {
-  bookingBtn: {
-    buttonText: string;
-    buttonAriaLabel: string;
-  };
-  booking: any;
-};
 
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
-  dict: Dictionary;
+  dict: {
+    bookingBtn: {
+      buttonText: string;
+      buttonAriaLabel: string;
+    };
+    booking: any;
+  };
   lang?: Locale;
 }
 
@@ -30,11 +30,15 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   lang = "sv",
 }) => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [bookingData, setBookingData] = useState<BookingFormData>({
     partySize: 0,
     date: "",
     time: 0,
-    offerUuid: "",
+    customerName: "",
+    customerEmail: "",
+    customerPhone: "",
+    notes: "",
   });
 
   const handlePartySizeSelect = useCallback((size: number) => {
@@ -49,28 +53,67 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     setBookingData((prev) => ({ ...prev, time }));
   }, []);
 
-  const handleFinalBooking = useCallback(() => {
-    const locale = lang === "en" ? "en-GB" : "sv";
-    const restaurantUuid = "1e84bc93-cf21-42ac-8bc2-6d2c234f393e";
-    const utmSource = "theoven.se";
+  const handleCustomerInfoUpdate = useCallback((info: Partial<BookingFormData>) => {
+    setBookingData((prev) => ({ ...prev, ...info }));
+  }, []);
+
+  const handleFinalBooking = useCallback(async () => {
+    setIsSubmitting(true);
     
-    const theForkUrl = `https://widget.thefork.com/${locale}/${restaurantUuid}?utm_source=${utmSource}&step=info&pax=${bookingData.partySize}&date=${bookingData.date}&time=${bookingData.time}`;
-    
-    window.open(theForkUrl, '_blank');
-    onClose();
-  }, [bookingData, lang, onClose]);
+    try {
+      const response = await fetch('/api/booking/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          date: bookingData.date,
+          time: bookingData.time,
+          partySize: bookingData.partySize,
+          customerName: bookingData.customerName,
+          customerEmail: bookingData.customerEmail,
+          customerPhone: bookingData.customerPhone,
+          notes: bookingData.notes,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Booking failed');
+      }
+
+      // Success
+      alert(dict.booking?.success || 'Bokning genomförd! Du kommer få en bekräftelse via e-post.');
+      onClose();
+      resetForm();
+    } catch (error) {
+      console.error('Booking error:', error);
+      alert(error instanceof Error ? error.message : 'Något gick fel. Försök igen.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, [bookingData, dict, onClose]);
 
   const resetForm = () => {
-    setBookingData({ partySize: 0, date: "", time: 0, offerUuid: "" });
+    setBookingData({
+      partySize: 0,
+      date: "",
+      time: 0,
+      customerName: "",
+      customerEmail: "",
+      customerPhone: "",
+      notes: "",
+    });
     setCurrentStep(1);
   };
 
   const handleClose = () => {
-    onClose();
-    resetForm();
+    if (!isSubmitting) {
+      onClose();
+      resetForm();
+    }
   };
 
-  const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, 3));
+  const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, 4));
   const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
   if (!isOpen) return null;
@@ -105,10 +148,22 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             selectedDate={bookingData.date}
             selectedTime={bookingData.time || null}
             onTimeSelect={handleTimeSelect}
+            onNext={nextStep}
+            onPrev={prevStep}
+            dict={dict}
+            lang={lang}
+          />
+        );
+      case 4:
+        return (
+          <BookingStep4
+            bookingData={bookingData}
+            onUpdate={handleCustomerInfoUpdate}
             onBook={handleFinalBooking}
             onPrev={prevStep}
             dict={dict}
             lang={lang}
+            isSubmitting={isSubmitting}
           />
         );
       default:
@@ -118,18 +173,16 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   return (
     <>
-      {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300 z-[80]"
         onClick={handleClose}
       />
 
-      {/* Modal */}
-      <div className="fixed bottom-0 left-2 right-2 z-[100] transform rounded-t-2xl bg-black transition-all duration-300 ease-out md:left-auto md:w-[50vh]">
-        <div className="max-h-[80vh] overflow-y-auto p-6">
+      <div className="fixed bottom-0 left-2 right-2 z-[100] transform rounded-t-2xl bg-black transition-all duration-300 ease-out md:left-auto md:right-2 md:w-[500px]">
+        <div className="max-h-[85vh] overflow-y-auto p-6">
           <div className="mb-6 flex items-center justify-between">
             <div className="flex space-x-2">
-              {[1, 2, 3].map((step) => (
+              {[1, 2, 3, 4].map((step) => (
                 <div
                   key={step}
                   className={`h-2 w-2 rounded-full transition-colors ${
@@ -145,7 +198,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             
             <button
               onClick={handleClose}
-              className="text-gray-400 transition-colors hover:text-white"
+              disabled={isSubmitting}
+              className="text-gray-400 transition-colors hover:text-white disabled:opacity-50"
             >
               <FaTimes className="h-4 w-4" />
             </button>

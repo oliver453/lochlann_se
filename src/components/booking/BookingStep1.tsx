@@ -1,22 +1,21 @@
+// src/components/booking/BookingStep1.tsx
 "use client";
 
 import React from "react";
-
-type Dictionary = {
-  booking: {
-    step1?: {
-      title?: string;
-      subtitle?: string;
-    };
-    nextButton?: string;
-  };
-};
 
 interface BookingStep1Props {
   selectedPartySize: number;
   onPartySizeSelect: (size: number) => void;
   onNext: () => void;
-  dict: Dictionary;
+  dict: {
+    booking: {
+      step1?: {
+        title?: string;
+        subtitle?: string;
+      };
+      nextButton?: string;
+    };
+  };
 }
 
 export const BookingStep1: React.FC<BookingStep1Props> = ({

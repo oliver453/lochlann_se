@@ -23,7 +23,7 @@ export function HeroSection({ dict }: HeroSectionProps) {
         poster="/images/hero-poster.webp"
         className="hero-video absolute inset-0 z-0"
       >
-       {/** <source src="/video/hero.webm" type="video/webm" /> */} 
+       <source src="/video/hero.webm" type="video/webm" />
         <source src="/video/hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

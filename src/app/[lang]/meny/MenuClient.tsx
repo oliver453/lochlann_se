@@ -7,17 +7,23 @@ import { FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+type MenuItem = {
+  name: string;
+  description: string;
+  price: string;
+  options?: Array<{
+    size: string;
+    price: string;
+  }>;
+};
+
 type Dictionary = {
   menu: {
     title: string;
     categories: Array<{
       name: string;
       image: string;
-      items: Array<{
-        name: string;
-        description: string;
-        price: string;
-      }>;
+      items: MenuItem[];
     }>;
   };
   bookingSection: {
@@ -76,18 +82,51 @@ export default function MenuClient({ dict }: { dict: Dictionary }) {
                   <div className="space-y-6">
                     {category.items.map((item, itemIndex) => (
                       <div key={itemIndex} className="pb-6">
-                        <div className="flex items-baseline justify-between mb-3">
-                          <h3 className="font-rustic text-xl text-white flex-shrink-0">
-                            {item.name}
-                          </h3>
-                          <div className="flex-grow mx-4 border-b-2 border-dotted border-white/30 min-w-[20px]"></div>
-                          <span className="font-rustic text-xl font-bold text-white flex-shrink-0">
-                            {item.price} kr
-                          </span>
-                        </div>
-                        <p className="mb-3 font-roboto leading-relaxed text-white/80">
-                          {item.description}
-                        </p>
+                        {/* Item name and price/options */}
+                        {item.options && item.options.length > 0 ? (
+                          // With options
+                          <>
+                            <div className="mb-3">
+                              <h3 className="font-rustic text-xl text-white">
+                                {item.name}
+                              </h3>
+                            </div>
+                            <p className="mb-3 font-roboto leading-relaxed text-white/80">
+                              {item.description}
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                              {item.options.map((option, optionIndex) => (
+                                <div
+                                  key={optionIndex}
+                                  className="flex items-center gap-2"
+                                >
+                                  <span className="font-roboto text-sm text-white/70">
+                                    {option.size}
+                                  </span>
+                                  <span className="font-rustic text-lg font-bold text-white">
+                                    {option.price} kr
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </>
+                        ) : (
+                          // Without options - standard layout
+                          <>
+                            <div className="flex items-baseline justify-between mb-3">
+                              <h3 className="font-rustic text-xl text-white flex-shrink-0">
+                                {item.name}
+                              </h3>
+                              <div className="flex-grow mx-4 border-b-2 border-dotted border-white/30 min-w-[20px]"></div>
+                              <span className="font-rustic text-xl font-bold text-white flex-shrink-0">
+                                {item.price} kr
+                              </span>
+                            </div>
+                            <p className="mb-3 font-roboto leading-relaxed text-white/80">
+                              {item.description}
+                            </p>
+                          </>
+                        )}
                       </div>
                     ))}
                   </div>

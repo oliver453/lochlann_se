@@ -1,25 +1,10 @@
+// src/components/booking/BookingStep2.tsx
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { fetchAvailabilities } from "../../utils/theForkApi";
-import {
-  formatDateForAPI,
-  getDaysInMonth,
-} from "../../utils/dateHelpers";
-import type { TheForkAvailability } from "../../../types/booking";
+import { getDaysInMonth, formatDateForAPI } from "@/lib/utils/date";
 import type { Locale } from "../../../i18n.config";
-
-type Dictionary = {
-  booking: {
-    step2?: {
-      title?: string;
-      subtitle?: string;
-    };
-    backButton?: string;
-    nextButton?: string;
-  };
-};
 
 interface BookingStep2Props {
   partySize: number;
@@ -27,7 +12,16 @@ interface BookingStep2Props {
   onDateSelect: (date: string) => void;
   onNext: () => void;
   onPrev: () => void;
-  dict: Dictionary;
+  dict: {
+    booking: {
+      step2?: {
+        title?: string;
+        subtitle?: string;
+      };
+      backButton?: string;
+      nextButton?: string;
+    };
+  };
   lang?: Locale;
 }
 
@@ -41,15 +35,13 @@ export const BookingStep2: React.FC<BookingStep2Props> = ({
   lang = "sv",
 }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [availabilities, setAvailabilities] = useState<TheForkAvailability[]>([]);
+  const [availableDates, setAvailableDates] = useState<Set<string>>(new Set());
   const [isLoading, setIsLoading] = useState(false);
 
-  // Weekday names based on language
   const weekdays = lang === "en" 
     ? ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     : ["Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"];
 
-  // Get month name based on selected language
   const getMonthName = (date: Date): string => {
     const locale = lang === "en" ? "en-US" : "sv-SE";
     return date.toLocaleDateString(locale, { 
@@ -58,45 +50,76 @@ export const BookingStep2: React.FC<BookingStep2Props> = ({
     });
   };
 
-  // Helper function to create timezone-safe date strings
-  const createDateString = (date: Date): string => {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-  };
-
-  const loadAvailabilities = useCallback(async () => {
+  const loadAvailability = useCallback(async () => {
     setIsLoading(true);
-    try {
-      const firstDay = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1);
-      const lastDay = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 0);
-      
-      const startDate = formatDateForAPI(firstDay);
-      const endDate = formatDateForAPI(lastDay);
+    const daysInMonth = getDaysInMonth(currentMonth.getFullYear(), currentMonth.getMonth());
+    const available = new Set<string>();
 
-      const data = await fetchAvailabilities(partySize, startDate, endDate);
-      setAvailabilities(data);
+    try {
+      // BATCHA: Hämta bara första och sista dagen för att se om det finns slots överhuvudtaget
+      const firstDay = formatDateForAPI(daysInMonth[0]);
+      const lastDay = formatDateForAPI(daysInMonth[daysInMonth.length - 1]);
+
+      // Kolla ett sample av dagar för att avgöra mönster
+      const sampleDates = [
+        daysInMonth[0], // Första dagen
+        daysInMonth[Math.floor(daysInMonth.length / 3)],
+        daysInMonth[Math.floor(daysInMonth.length / 2)],
+        daysInMonth[Math.floor(daysInMonth.length * 2 / 3)],
+        daysInMonth[daysInMonth.length - 1], // Sista dagen
+      ];
+
+      const samplePromises = sampleDates.map(async (date) => {
+        const dateStr = formatDateForAPI(date);
+        const response = await fetch(
+          `/api/booking/availability?date=${dateStr}&partySize=${partySize}`
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          if (data.slots && data.slots.some((slot: any) => slot.isAvailable)) {
+            return dateStr;
+          }
+        }
+        return null;
+      });
+
+      const sampleResults = await Promise.all(samplePromises);
+      
+      // Om sample har tillgänglighet, markera alla dagar som potentiellt tillgängliga
+      // Användare kan fortfarande klicka och få exakt info i nästa steg
+      if (sampleResults.some(r => r !== null)) {
+        daysInMonth.forEach(date => {
+          const dateStr = formatDateForAPI(date);
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          const dateWithoutTime = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+          
+          // Lägg bara till framtida datum
+          if (dateWithoutTime >= today) {
+            available.add(dateStr);
+          }
+        });
+      }
+      
+      setAvailableDates(available);
     } catch (error) {
-      console.error("Failed to load availabilities:", error);
+      console.error("Failed to load availability:", error);
     } finally {
       setIsLoading(false);
     }
   }, [currentMonth, partySize]);
 
   useEffect(() => {
-    loadAvailabilities();
-  }, [loadAvailabilities]);
+    loadAvailability();
+  }, [loadAvailability]);
 
   const isDateAvailable = (date: Date): boolean => {
-    const dateStr = createDateString(date);
-    return availabilities.some(
-      (avail) => avail.date === dateStr && avail.hasNormalStock,
-    );
+    return availableDates.has(formatDateForAPI(date));
   };
 
   const isDateSelected = (date: Date): boolean => {
-    return createDateString(date) === selectedDate;
+    return formatDateForAPI(date) === selectedDate;
   };
 
   const navigateMonth = (direction: "prev" | "next") => {
@@ -110,18 +133,12 @@ export const BookingStep2: React.FC<BookingStep2Props> = ({
   };
 
   const handleDateClick = (date: Date) => {
-    const dateStr = createDateString(date);
-    
     if (isDateAvailable(date)) {
-      onDateSelect(dateStr);
+      onDateSelect(formatDateForAPI(date));
     }
   };
 
-  const daysInMonth = getDaysInMonth(
-    currentMonth.getFullYear(),
-    currentMonth.getMonth(),
-  );
-  
+  const daysInMonth = getDaysInMonth(currentMonth.getFullYear(), currentMonth.getMonth());
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -136,7 +153,6 @@ export const BookingStep2: React.FC<BookingStep2Props> = ({
         </p>
       </div>
 
-      {/* Calendar Header */}
       <div className="flex items-center justify-between">
         <button
           onClick={() => navigateMonth("prev")}
@@ -159,30 +175,22 @@ export const BookingStep2: React.FC<BookingStep2Props> = ({
         </button>
       </div>
 
-      {/* Calendar Grid with loading overlay */}
       <div className="relative">
         <div className={`transition-opacity duration-300 ${isLoading ? 'opacity-30' : 'opacity-100'}`}>
           <div className="grid grid-cols-7 gap-1">
-            {/* Weekday headers */}
             {weekdays.map((day) => (
-              <div
-                key={day}
-                className="py-2 text-center text-xs font-medium text-gray-400"
-              >
+              <div key={day} className="py-2 text-center text-xs font-medium text-gray-400">
                 {day}
               </div>
             ))}
 
-            {/* Empty cells for days before month start */}
             {Array.from({ length: (daysInMonth[0].getDay() + 6) % 7 }, (_, i) => (
               <div key={`empty-${i}`} />
             ))}
 
-            {/* Calendar days */}
             {daysInMonth.map((date) => {
               const available = isDateAvailable(date);
               const selected = isDateSelected(date);
-              
               const dateWithoutTime = new Date(date.getFullYear(), date.getMonth(), date.getDate());
               const isPast = dateWithoutTime < today;
               const canSelect = available && !isPast;
@@ -194,12 +202,11 @@ export const BookingStep2: React.FC<BookingStep2Props> = ({
                   disabled={!canSelect || isLoading}
                   className={`
                     aspect-square rounded text-sm font-medium transition-all duration-200
-                    ${
-                      selected
-                        ? "bg-white text-black"
-                        : canSelect
-                        ? "border border-gray-600 bg-gray-800 text-white hover:bg-gray-700"
-                        : "cursor-not-allowed text-gray-500 opacity-50"
+                    ${selected
+                      ? "bg-white text-black"
+                      : canSelect
+                      ? "border border-gray-600 bg-gray-800 text-white hover:bg-gray-700"
+                      : "cursor-not-allowed text-gray-500 opacity-50"
                     }
                   `}
                 >
@@ -210,7 +217,6 @@ export const BookingStep2: React.FC<BookingStep2Props> = ({
           </div>
         </div>
 
-        {/* Loading overlay */}
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="h-6 w-6 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
